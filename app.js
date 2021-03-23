@@ -7,7 +7,7 @@ document.querySelector("#joke-form").addEventListener("submit", function(e){
 
 function getJokes(n){
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", `http://api.icndb.com/jokes/random/${n}`, true);
+    xhr.open("GET", `https://api.icndb.com/jokes/random/${n}`, true);
     xhr.onload = function(){
         if(this.status === 200){
             let resp =  JSON.parse(this.responseText);
